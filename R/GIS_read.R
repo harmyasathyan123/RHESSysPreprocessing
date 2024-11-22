@@ -133,11 +133,11 @@ GIS_read = function(maps_in, map_dir, map_info = NULL, seq_patch_IDs = FALSE, ou
     if ("streams" %in% map_info[, 1]) {
       NAs_in_wrld[[map_info[map_info[, 1] == "streams", 2]]] = NULL
     }
-    if (any(NAs_in_wrld > 0) ) {
-      cat("One or more maps have NAs within the bounds of the world map, see maps and counts of NAs below:\n")
-      print(NAs_in_wrld[NAs_in_wrld > 0])
-      stop("See above and check your input maps.")
-    }
+    #if (any(NAs_in_wrld > 0) ) {
+      #cat("One or more maps have NAs within the bounds of the world map, see maps and counts of NAs below:\n")
+      #print(NAs_in_wrld[NAs_in_wrld > 0])
+      #stop("See above and check your input maps.")
+    #}
   }
 
   # OLD AND BAD - GETTING RID OF - Convert maps to SpatialGridDataFrame since world_gen.R expects that format
